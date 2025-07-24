@@ -42,7 +42,7 @@ class BrightwheelClient:
             yield Activity(activity)
 
     def get_all_activities(self, student_id: str) -> Iterable[Activity]:
-        page: int = 1
+        page: int = 0
         while True:
             activities: List[Activity] = list(self.get_activities(student_id, page, count=1000))
             page += 1
