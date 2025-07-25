@@ -10,6 +10,6 @@ WORKDIR /app
 COPY README.md /app 
 RUN mkdir /app/brightwheel
 COPY brightwheel /app/brightwheel
-RUN poetry install --no-dev
+RUN poetry install
 
 ENTRYPOINT [ "brightwheel-export" ]
